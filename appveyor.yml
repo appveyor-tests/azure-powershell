@@ -1,0 +1,7 @@
+test_script:
+- ps: $ErrorActionPreference = "Stop"
+- ps: if(-not (Test-Path "$env:APPDATA\Windows Azure Powershell\AzureDataCollectionProfile.json")) { throw "AzureDataCollectionProfile.json does not exist."; }
+- ps: Get-Command Login-AzureRmAccount
+- ps: Get-Command Get-AzureRmApiManagementBackend
+
+build: off
