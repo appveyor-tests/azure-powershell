@@ -1,4 +1,5 @@
 test_script:
+- appveyor version
 - ps: $ErrorActionPreference = "Stop"
 - ps: if(-not (Test-Path "$env:APPDATA\Windows Azure Powershell\AzureDataCollectionProfile.json")) { throw "AzureDataCollectionProfile.json does not exist."; }
 - ps: Get-Command Login-AzureRmAccount
